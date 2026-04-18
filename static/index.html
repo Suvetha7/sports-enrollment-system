@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Enrollment System</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Continuous Assessment Project</p>
+          <h1>Data-Driven Sports Enrollment and Management System</h1>
+          <p class="hero-text">
+            A final-year Computer Science style web portal for managing sports registrations,
+            preventing duplicate entries, handling concurrent seat allocation, and generating
+            operational analytics.
+          </p>
+          <div class="hero-tags">
+            <span>Python Backend</span>
+            <span>Transactional Enrollment</span>
+            <span>Analytics Dashboard</span>
+            <span>GitHub Ready</span>
+          </div>
+        </div>
+        <div class="hero-metrics" id="heroMetrics"></div>
+      </header>
+
+      <main class="content-grid">
+        <section class="card span-two">
+          <div class="section-head">
+            <div>
+              <p class="section-label">Operations</p>
+              <h2>Sports Programs</h2>
+            </div>
+            <button id="refreshButton" class="ghost-button">Refresh Data</button>
+          </div>
+          <div id="programGrid" class="program-grid"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-head compact">
+            <div>
+              <p class="section-label">Portal Access</p>
+              <h2>Create Account</h2>
+            </div>
+          </div>
+          <form id="registerForm" class="form-stack">
+            <input name="full_name" placeholder="Full name" required />
+            <input name="email" type="email" placeholder="College email" required />
+            <input name="student_id" placeholder="Student ID" required />
+            <input name="phone" placeholder="Phone number" required />
+            <input name="password" type="password" placeholder="Password" required />
+            <button type="submit">Register Student</button>
+          </form>
+          <p class="form-message" id="registerMessage"></p>
+        </section>
+
+        <section class="card">
+          <div class="section-head compact">
+            <div>
+              <p class="section-label">Authentication</p>
+              <h2>Student Login</h2>
+            </div>
+          </div>
+          <form id="loginForm" class="form-stack">
+            <input name="email" type="email" placeholder="Registered email" required />
+            <input name="password" type="password" placeholder="Password" required />
+            <button type="submit">Log In</button>
+          </form>
+          <p class="form-message" id="loginMessage"></p>
+          <div class="demo-box">
+            <strong>Demo account</strong>
+            <p>ananya.iyer@college.edu / Sports@123</p>
+          </div>
+        </section>
+
+        <section class="card span-two">
+          <div class="section-head">
+            <div>
+              <p class="section-label">Transactional Module</p>
+              <h2>Enroll in a Program</h2>
+            </div>
+          </div>
+          <form id="enrollForm" class="enroll-form">
+            <input name="email" type="email" placeholder="Student email" required />
+            <select name="program_id" id="programSelect" required>
+              <option value="">Select sports program</option>
+            </select>
+            <input name="notes" placeholder="Optional note for coordinator" />
+            <button type="submit">Confirm Enrollment</button>
+          </form>
+          <p class="form-message" id="enrollMessage"></p>
+        </section>
+
+        <section class="card">
+          <div class="section-head compact">
+            <div>
+              <p class="section-label">Insights</p>
+              <h2>Category Analytics</h2>
+            </div>
+          </div>
+          <div id="categoryStats" class="stats-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="section-head compact">
+            <div>
+              <p class="section-label">Activity Feed</p>
+              <h2>Recent Enrollments</h2>
+            </div>
+          </div>
+          <div id="recentEnrollments" class="activity-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
