@@ -1,6 +1,6 @@
 # Data-Driven Sports Enrollment and Management System
 
-This project is a final-year Computer Science style web application built from your seminar brief on sports enrollment analytics. It provides a sports program portal with registration, secure login, real-time seat tracking, duplicate prevention, transactional enrollment handling, and analytics dashboards.
+This project is a final-year Computer Science style web application built on sports enrollment analytics. It provides a sports program portal with registration, secure login, real-time seat tracking, duplicate prevention, transactional enrollment handling, and analytics dashboards.
 
 The implementation is intentionally GitHub-friendly:
 
